@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FireBaseLogin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="FireBaseLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,6 +50,9 @@
                                                 <state key="normal" title="LogIn">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signinbtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6hT-ue-nIH"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saF-5p-1GE" customClass="CustomBtn" customModule="FireBaseLogin" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="270" width="358" height="62"/>
@@ -89,6 +92,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailtxtbox" destination="Ejz-xu-dbe" id="AUv-0q-GA1"/>
+                        <outlet property="passwordtxtbox" destination="y3B-uh-gYT" id="C6n-Yo-TdK"/>
                         <segue destination="u2a-vs-zzT" kind="show" identifier="segue" id="afo-Ar-LX8"/>
                     </connections>
                 </viewController>
@@ -140,6 +145,9 @@
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="SignUpBtnPressed:" destination="u2a-vs-zzT" eventType="touchUpInside" id="sAf-uS-Ebr"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ORP-i0-zFp" customClass="CustomTextField" customModule="FireBaseLogin" customModuleProvider="target">
                                         <rect key="frame" x="8" y="154" width="346" height="66"/>
@@ -180,6 +188,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="FvP-5g-gvy"/>
                     <connections>
+                        <outlet property="emailtxtbox" destination="SUk-VN-1ov" id="UcT-kZ-Cpl"/>
+                        <outlet property="passwordtxtbox" destination="ORP-i0-zFp" id="EiB-xJ-0wT"/>
                         <segue destination="uZI-Ga-9XX" kind="unwind" unwindAction="unwind:" id="mo8-jR-EZ2"/>
                     </connections>
                 </viewController>

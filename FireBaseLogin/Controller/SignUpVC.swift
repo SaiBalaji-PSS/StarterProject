@@ -9,6 +9,8 @@ import UIKit
 
 class SignUpVC: UIViewController {
 
+    @IBOutlet weak var emailtxtbox: CustomTextField!
+    @IBOutlet weak var passwordtxtbox: CustomTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,17 +18,11 @@ class SignUpVC: UIViewController {
     }
     
 
+    @IBAction func SignUpBtnPressed(_ sender: Any) {
+    }
     @IBAction func backbtnpressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
